@@ -89,3 +89,63 @@ a , a:hover{
     {
         background-color: var(--light-color) !important;
     }
+
+
+    .badge {
+        padding-left: 9px;
+        padding-right: 9px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+      
+      .label-warning[href],
+      .badge-warning[href] {
+        background-color: #c67605;
+      }
+      #lblCartCount {
+          font-size: 12px;
+          background: green;
+          color: #fff;
+          padding: 0 5px;
+          vertical-align: top;
+          margin-left: -10px; 
+      }    
+.nav{
+    width: 900px;
+    position: relative;
+}
+.icon{
+
+position: absolute;
+right: 0;
+
+}
+.icon2{
+
+position: absolute;
+right: 70px;
+}
+
+.col {
+    flex: 1 1 200px; 
+    max-width: 250px; 
+    box-sizing: border-box;
+  }
+
+ /* Media Queries */
+ @media (max-width: 768px) {
+    .col {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  .cat {
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+  }
+ 

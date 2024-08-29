@@ -7,17 +7,17 @@ export default function Category(props) {
 
   console.log(props);
   
- let category=props.categoryName   
+ let category = props.categoryName;   
     
   const [product, setdetails] = useState([]);
   const [loading, setloading] = useState(true)
 
-  function relatedcategory(){
+  function getrelatedcategory(){
     axios.get(`https://ecommerce.routemisr.com/api/v1/products`)
     .then(({data})=>{
       setloading(false)
-    let allproduct= data.data;
-     let related= allproduct.filter((prod)=>{
+    let allproducts = data.data;
+     let related= allproducts.filter((prod)=>{
 return prod.category.name === category
 })
 setdetails(related)
@@ -25,7 +25,7 @@ setdetails(related)
     .catch(()=>{ setloading(false)})
   }
 useEffect(()=>{
-    relatedcategory()
+    getrelatedcategory()
 } ,[])
   return (
     <>

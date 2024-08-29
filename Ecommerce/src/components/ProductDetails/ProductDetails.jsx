@@ -14,10 +14,7 @@ let {addProductTocart}=useContext(CartContext);
 
   async function addproductItem(id) {
     let response = await addProductTocart(id);
-    console.log(response);
-  
-    
-    
+    console.log(response);   
     if(response.data.status == 'success')
       toast.success(response.data.message,{
         duration: 4000,
@@ -34,11 +31,8 @@ let {addProductTocart}=useContext(CartContext);
 const [details,setdetails] = useState(null)
 
 function getproductDetails(){
- 
 axios.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
-  .then(({data})=>{
-    setdetails(data.data)
-  })
+  .then(({data})=>{setdetails(data.data)})
   .catch()
 }
 useEffect(()=>{
@@ -69,4 +63,26 @@ useEffect(()=>{
     </>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
